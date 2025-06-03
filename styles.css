@@ -1,29 +1,128 @@
-@import url(STYLES/harder.css);
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap');
 
 :root {
-    --cor-de-fundo: #f1a8ca; /* rosa claro */
-    --cor-cabecalho: #cfa2b1;
-    --cor-texto: #242424;
+  --rosa-claro: #ffe4ec;
+  --rosa-medio: #ff9cb5;
+  --rosa-escuro: #d94f81;
+  --rosa-sombra: rgba(255, 156, 181, 0.3);
+  --texto: #333;
+  --fundo: #fff0f5;
+  --fonte-principal: 'Raleway', sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  font-family: var(--fonte-principal);
 }
 
 body {
-    background-color: var(--cor-de-fundo);
-    margin: 0;
-    font-family: Arial, sans-serif;
-    color: var(--cor-texto);
+  background-color: var(--fundo);
+  color: var(--texto);
+  line-height: 1.6;
+  padding: 20px;
 }
 
-main {
-    padding: 20px;
+/* CABEÇALHO */
+.cabecalho {
+  background-color: var(--rosa-escuro);
+  color: white;
+  text-align: center;
+  padding: 30px;
+  border-radius: 10px;
+  margin-bottom: 20px;
 }
 
-h2 {
-    color: #99004d; /* rosa escuro */
+.cabecalho img {
+  width: 100%;
+  max-width: 600px;
+  margin: 20px auto;
+  border: 4px solid white;
+  border-radius: 10px;
+  display: block;
 }
 
-.Impacto-do-Desmatamento, .Problemas-Causados-pelo-Desmatamento, .Consequências-Globais, .conclusão, .Referências {
-    margin-bottom: 20px;
-    padding: 15px;
-    background: rgba(180, 83, 83, 0.8);
-    border-radius: 10px;
+.cabecalho .titulo {
+  font-size: 2.5em;
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+.cabecalho .frase {
+  font-style: italic;
+  margin-top: 10px;
+}
+
+/* MENU */
+.menu {
+  margin-top: 20px;
+}
+
+.menu ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.menu ul li a {
+  text-decoration: none;
+  background-color: var(--rosa-medio);
+  color: white;
+  padding: 10px 15px;
+  border-radius: 20px;
+  transition: background 0.3s;
+  font-weight: bold;
+}
+
+.menu ul li a:hover {
+  background-color: var(--rosa-escuro);
+}
+
+/* SEÇÕES */
+.caixa {
+  background-color: var(--rosa-claro);
+  padding: 20px;
+  margin: 30px auto;
+  max-width: 900px;
+  border-radius: 15px;
+  border: 2px solid var(--rosa-medio);
+  box-shadow: 0 4px 12px var(--rosa-sombra);
+}
+
+.caixa h2 {
+  color: var(--rosa-escuro);
+  margin-bottom: 15px;
+}
+
+.caixa ul {
+  margin-left: 20px;
+  list-style-type: square;
+}
+
+/* VÍDEO */
+.video-box {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.video-box iframe {
+  width: 100%;
+  max-width: 560px;
+  height: 315px;
+  border: 3px solid var(--rosa-medio);
+  border-radius: 10px;
+}
+
+/* LINKS */
+a {
+  color: var(--rosa-escuro);
+}
+
+a:hover {
+  text-decoration: underline;
 }

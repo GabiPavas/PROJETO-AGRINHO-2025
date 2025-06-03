@@ -1,35 +1,58 @@
+/* Cores personalizadas */
+:root {
+  --cor-cabecalho: #ff4f81;
+  --rosa-principal: #f7007b;
+  --rosa-claro: #faabd6;
+}
+
+/* Estilização do cabeçalho */
 .cabecalho {
-    background-color: var(--cor-cabecalho);
-    padding: 1em;
-    text-align: center;
+  background-color: var(--cor-cabecalho);
+  padding: 1em;
+  text-align: center;
+  border-radius: 10px;
+  color: white;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
+/* Container flexível e centralizado */
 .container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
+/* Imagem do cabeçalho */
 .container.imagem {
-    max-width: 100px;
-    margin-bottom: 10px;
+  max-width: 120px;
+  margin-bottom: 10px;
+  border-radius: 10px;
 }
 
+/* Título principal */
 .container.titulo {
-    font-size: 1.8em;
-    font-weight: bold;
-    color: #f7007b;
+  font-size: 2em;
+  font-weight: bold;
+  color: var(--rosa-principal);
+  text-shadow: 1px 1px 2px #fff;
 }
 
+/* Frase abaixo do título */
 .container.frase {
-    font-style: italic;
-    color: #faabd6;
+  font-style: italic;
+  color: var(--rosa-claro);
+  font-size: 1.1em;
 }
 
-/* Responsividade */
+/* Responsividade para telas maiores */
 @media screen and (min-width: 600px) {
-    .container.titulo, 
-    .container.frase {
-        display: block;
-    }
+  .container.titulo,
+  .container.frase {
+    display: block;
+    text-align: center;
+  }
+
+  .container.imagem {
+    max-width: 150px;
+  }
 }
