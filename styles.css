@@ -1,10 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Oswald&family=Raleway&display=swap');
 
 :root {
-  --primary-color: #d94f70;
-  --secondary-color: #f7a8b8;
-  --text-color: #ff239c;
-  --background-color: #ffe6ec;
+  --primary-color: #ff4f81;
+  --secondary-color: #ffc0cb;
+  --text-color: #333;
+  --background-color: #fff0f5;
+  --box-color: #ffe4ec;
+  --border-color: #cc2e5d;
   --font-title: 'Oswald', sans-serif;
   --font-body: 'Raleway', sans-serif;
 }
@@ -25,22 +27,30 @@ body {
 
 header {
   background: var(--primary-color);
-  color: rgb(226, 88, 118);
+  color: white;
   text-align: center;
   padding: 30px;
+  border-radius: 10px;
 }
 
 header h1 {
   font-family: var(--font-title);
-  margin-bottom: 15px;
+  margin-bottom: 10px;
+}
+
+.image-box {
+  background-color: var(--box-color);
+  padding: 10px;
+  border: 4px solid var(--border-color);
+  border-radius: 10px;
+  display: inline-block;
+  margin: 20px auto;
 }
 
 header img {
-  width: 100%;
-  max-width: 620px;
-  margin: 30px auto;
+  max-width: 100%;
+  border-radius: 5px;
   display: block;
-  border-radius: 15px;
 }
 
 nav ul {
@@ -54,7 +64,7 @@ nav ul li {
 }
 
 nav ul li a {
-  color: rgb(252, 23, 164);
+  color: white;
   text-decoration: none;
   font-weight: bold;
 }
@@ -64,13 +74,14 @@ nav ul li a:hover {
 }
 
 .container {
-  background: rgb(253, 129, 129);
+  background: var(--box-color);
   padding: 20px;
   margin: 20px auto;
   width: 90%;
   max-width: 800px;
-  border-radius: 10px;
+  border-radius: 15px;
   box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  border: 2px solid var(--border-color);
 }
 
 ul {
@@ -79,18 +90,24 @@ ul {
   margin-top: 10px;
 }
 
+.video-box {
+  margin-top: 20px;
+  text-align: center;
+}
+
 iframe {
-  display: block;
-  margin: 20px auto;
   max-width: 100%;
+  border: 3px solid var(--border-color);
+  border-radius: 10px;
 }
 
 footer {
   text-align: center;
   margin-top: 40px;
-  color: rgb(255, 197, 197);
+  color: white;
   background: var(--primary-color);
   padding: 20px;
+  border-radius: 10px;
 }
 
 .cta-footer {
@@ -98,7 +115,7 @@ footer {
   margin-top: 10px;
   padding: 10px 20px;
   background: var(--secondary-color);
-  color: rgb(252, 227, 227);
+  color: white;
   text-decoration: none;
   font-weight: bold;
   border-radius: 5px;
@@ -106,5 +123,5 @@ footer {
 }
 
 .cta-footer:hover {
-  background: #c03e60;
+  background: #ff80a0;
 }
